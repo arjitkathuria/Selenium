@@ -12,6 +12,9 @@ public class LoginPage extends Page {
     @FindBy(id = "passwd")
     private WebElement passwordTextField;
 
+    @FindBy(id = "SubmitLogin")
+    private WebElement submitButton;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -21,6 +24,8 @@ public class LoginPage extends Page {
         emailTextField.sendKeys(userName);
         utilities.waitForElementExists(passwordTextField, 5);
         passwordTextField.sendKeys(password);
+        utilities.waitForElementExists(submitButton, 3);
+        submitButton.click();
     }
 
 }

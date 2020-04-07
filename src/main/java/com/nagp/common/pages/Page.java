@@ -1,6 +1,6 @@
 package com.nagp.common.pages;
 
-import com.nagp.common.Runner.BaseRunner;
+import com.nagp.common.runner.BaseRunner;
 import com.nagp.common.utilities.Utilities;
 import org.openqa.selenium.WebDriver;
 

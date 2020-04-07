@@ -1,6 +1,6 @@
 package com.nagp.test;
 
-import com.nagp.common.Runner.BaseRunner;
+import com.nagp.common.runner.BaseRunner;
 import com.nagp.common.pages.common.Header;
 import com.nagp.common.pages.HomePage;
 import com.nagp.common.pages.LoginPage;
@@ -36,15 +36,14 @@ public class LoginTestRunner extends BaseRunner {
     }
 
     @Test(description = "Verify login with valid user and invalid user", priority = 1, dataProvider = "LoginSheet")
-    public void testData(String userName, String password) {
-        SoftAssert softAssertion= new SoftAssert();
+    public void verifyValidAndInValidUser(String userName, String password) {
+        SoftAssert softAssertion = new SoftAssert();
         homePage.clicklOnSignInButton();
         logionPage.login(userName, password);
         softAssertion.assertTrue(header.isAccontNameDisplayed(),
-                String.format("Price not similar on page %s", header.getCurrentUrl()));;
-        header.logout();
+                String.format("Account not displayed", header.getCurrentUrl()));
         Assert.assertTrue(header.isAccontNameDisplayed(),
-                String.format("Price not similar on page %s", header.getCurrentUrl()));;
+                String.format("Account not displayed", header.getCurrentUrl()));
         header.logout();
     }
 

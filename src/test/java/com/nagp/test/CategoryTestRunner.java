@@ -1,6 +1,6 @@
 package com.nagp.test;
 
-import com.nagp.common.Runner.BaseRunner;
+import com.nagp.common.runner.BaseRunner;
 import com.nagp.common.pages.CategoryPage;
 import com.nagp.common.pages.HomePage;
 import org.openqa.selenium.support.PageFactory;

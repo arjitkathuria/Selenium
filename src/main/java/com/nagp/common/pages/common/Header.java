@@ -34,7 +34,7 @@ public class Header extends Page {
     }
 
     public boolean isAccontNameDisplayed(){
-        utilities.waitForElementExists(logoutButton, 5);
+        utilities.waitForElementExists(accountName, 5);
         return utilities.isElementExist(accountName);
     }
 }

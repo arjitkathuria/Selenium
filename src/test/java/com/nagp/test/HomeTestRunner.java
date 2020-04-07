@@ -1,6 +1,6 @@
 package com.nagp.test;
 
-import com.nagp.common.Runner.BaseRunner;
+import com.nagp.common.runner.BaseRunner;
 import com.nagp.common.pages.CategoryPage;
 import com.nagp.common.pages.common.Header;
 import com.nagp.common.pages.HomePage;
@@ -27,15 +27,6 @@ public class HomeTestRunner extends BaseRunner {
 
     @Test(description = "Verify search product price", priority = 2)
     public void verifySearchProductAndPrice() {
-        String searchProduct = "Faded Short Sleeve T-shirts";
-        header.searchProductAndSubmit(searchProduct);
-        String expectedPrice = "$20";
-        Assert.assertEquals(categoryPage.getProductPrice(), expectedPrice,
-                String.format("Price not similar on page %s", categoryPage.getCurrentUrl()));
-    }
-
-    @Test(description = "Verify search product heading", priority = 3)
-    public void verifySearchProductHeading() {
         String searchProduct = "Faded Short Sleeve T-shirts";
         header.searchProductAndSubmit(searchProduct);
         String expectedPrice = "$20";
