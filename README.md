@@ -1,5 +1,10 @@
 # GUI Test Automation using Selenium
 
+## Important feature
+1. Used bonigarcia library no need to pass driver path it will read by itself
+2. Put the driver.exe in the root directory it will load automatically.
+3. Bonigarcia library using git hub dependency refer ``
+
 ## Features supported
 1. Dependency management and project management by using MAVEN. 
 2. Functional UI Automation by using Selenium.
@@ -18,6 +23,7 @@
 15. Capture screen shots for failed testcases.
 16. Implicit and Explicit waits are considered for Windows to Load and Webelement to load.
 17. Used data providers from excel to read data.
+18. Add listners to add result for skipped test cases in extent report and in logs.
 
 
 ### Pre-requisites: ###
@@ -41,4 +47,4 @@
 * Run by maven use test command
 
 ## Git Repository for the source.
-`https://github.com/`
+`https://github.com/arjitkathuria/Selenium.git`
